@@ -7,7 +7,7 @@ const books = require('./routes/books');
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
-  extended: false
+    extended: false
 }));
 app.use(bodyParser.json());
 app.use(books);
@@ -19,3 +19,5 @@ app.use(function(req, res) {
 app.listen(port, function() {
     console.log('Listening on port', port);
 });
+
+module.exports = app;
